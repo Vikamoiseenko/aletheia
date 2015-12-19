@@ -1,0 +1,174 @@
+@charset "UTF-8";
+/* CSS Document */
+/*
+Theme Name: Aletheia Creation
+Author: Anna Atiagina, Victoria Moiseenko 
+Description: Theme for Aletheia Creation
+Version: 1.0
+
+*/
+
+
+/* RESETS */
+body, body * {
+	margin: 0; 
+	padding: 0; 
+}
+@font-face {
+    font-family: 'Helvetica';
+    src: url('helvetica-webfont.eot?') format('eot'),
+         url('helvetica-webfont.woff') format('woff'),
+         url('helvetica-webfont.ttf') format('truetype'),
+         url('helvetica-webfont.svg#webfontvXHkqCMg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* GLOBAL TEXT STYLES */
+
+html {
+	/*font-size: 16px; */
+	height: 100%; overflow: auto; margin: 0;
+	-webkit-overflow-scrolling: touch;
+}
+
+* HEADINGS */
+html {
+   font-size: 1em;		
+}
+
+img, embed, object, video, iframe, .wp-caption { 	
+	max-width: 100%;		/* images never exceed parent container's size */
+	width: auto;			/* override img width for IE8 and below */
+	/*height: auto;			/* override img height attribute to maintain aspect ratio */
+}
+
+
+iframe {
+	max-width: 100%;		/* images never exceed parent container's size */
+	width: auto;			/* override img width for IE8 and below */
+	height: auto;		
+}
+/* HEADINGS */
+
+body{
+    font-family: 'Helvetica', arial, sans-serif;
+    height: 100%;
+    margin: 0;
+}
+.navbar-collapse{
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0px;
+}
+#header{
+    max-width: 980px;
+    position: relative;
+    margin: 0 auto;
+}
+#header-container{
+    height: 130px;
+    
+}
+.navbar-brand{
+    padding: 0;
+}
+#social-header{
+    float: right;
+    overflow: hidden;
+    margin-top: 15px;
+}
+.fa-3x{
+    padding-left: 10px;
+    padding-right: 0;
+    color: #58595b;
+}
+div#text-header{
+    float: right;
+    overflow: hidden;
+    margin-top: 45px;
+    clear: both;
+}
+div#text-header p{
+    font-size: 12pt;
+    line-height: 22pt;
+}
+.navbar-nav > li {
+    padding-right: 37px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #e76b7e;
+}
+.navbar-default .navbar-nav > li > a:focus,  .navbar-default .navbar-nav > li > a:hover{
+    color: #eeeadb;
+    background-color: #e76b7e;
+}
+html body nav.navbar.navbar-default {
+    background: #eeeadb;
+    border: #eeeadb;
+}
+html body nav.navbar.navbar-default div.collapse.navbar-collapse.navbar-ex1-collapse ul.nav.navbar-nav li {
+    text-align: center;
+}
+navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+    color: #eeeadb;
+    background: #e76b7e;
+}
+.dropdown-menu > li > a {
+    color: #e76b7e;
+     background: #eeeadb;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .open > a {
+    color: #eeeadb;
+    background: #e76b7e;
+}
+.dropdown-menu{
+    background: #eeeadb;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+    color: #eeeadb;
+    background: #e76b7e;
+}
+.navbar-toggle {
+    clear: both;
+}
+
+div#middle{
+    clear: both;
+    max-width: 980px;
+    border: 1px solid blue;
+    margin: 0 auto;
+    padding: 0;
+    
+}
+.row-content{
+    margin: 0 auto;
+    background-color: #eeeadb;
+    border: 1px solid blue;
+    clear: both;
+    padding: 10px;
+}
+.row-footer{
+    clear: both;
+    padding-top: 10px;
+}
+.list-menu{
+    list-style: none;
+    padding-left: 20px;
+    color: #414042;
+    font-size: 12pt;
+    line-height: 24pt;
+}
+div#social-footer{
+    text-align: center;
+}
+.widgets-item{
+    height: 300px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 5px;
+}
+#logo-footer{
+    padding-bottom: 95px;
+}
