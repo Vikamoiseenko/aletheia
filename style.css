@@ -39,7 +39,7 @@ html {
 
 img, embed, object, video, iframe, .wp-caption { 	
 	max-width: 100%;		/* images never exceed parent container's size */
-	width: auto;			/* override img width for IE8 and below */
+	/*width: auto;			/* override img width for IE8 and below */
 	/*height: auto;			/* override img height attribute to maintain aspect ratio */
 }
 
@@ -93,9 +93,13 @@ div#text-header p{
     font-size: 12pt;
     line-height: 22pt;
 }
-.navbar-nav > li {
-    padding-right: 37px;
+ ul#menu-main.nav.navbar-nav li {
+     padding-right: 35px;
 }
+.nav navbar-nav > li {
+    padding-right: 35px;
+}
+
 
 .navbar-default .navbar-nav > li > a {
     color: #e76b7e;
@@ -137,7 +141,6 @@ navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:
 div#middle{
     clear: both;
     max-width: 980px;
-    border: 1px solid blue;
     margin: 0 auto;
     padding: 0;
     
@@ -155,10 +158,38 @@ div#middle{
 }
 .list-menu{
     list-style: none;
-    padding-left: 20px;
+    padding-left: 50px;
     color: #414042;
     font-size: 12pt;
     line-height: 24pt;
+}
+div#middle.container nav.woocommerce-breadcrumb a{
+    color: #e76b7e;
+    
+}
+p{
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+h2.style{
+    text-align: center;
+     color: #e76b7e;
+    line-height: 36px;
+}
+div#about.row{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    max-width: 980px;
+    margin: 0px auto;
+    
+}
+div.wrap{
+    background-color: #eeeadb;
+}
+
+.footer-container{
+    margin: 0 auto;
+    max-width: 980px;
 }
 div#social-footer{
     text-align: center;
@@ -167,8 +198,103 @@ div#social-footer{
     height: 300px;
     border-radius: 10px;
     background-color: white;
+    width: 300px;
+}
+html body.home.page.page-id-42.page-template-default.logged-in.admin-bar.customize-support div#middle.container div.row.row-content div.col-xs-12.col-sm-4 section.widgets-item a.widgets-image img.attachment-medium.size-medium.wp-post-image{
+    text-align: center;
+}
+
+section.widgets-item p.widgets{
+    font-size: 16pt;
+    line-height: 21pt;
+    color: #000;
     margin: 5px;
+    text-align: center;
+}
+section.widgets-item h3.widgets{
+    font-size: 28pt;
+    line-height: 34pt;
+    color: #e76b7e;
+    text-align: center;
 }
 #logo-footer{
     padding-bottom: 95px;
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
 }

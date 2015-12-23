@@ -75,8 +75,24 @@
   </div> 
   <!-- Collect the nav links, forms, and other content for toggling --> 
   <div class="collapse navbar-collapse navbar-ex1-collapse"> 
-    <ul class="nav navbar-nav"> 
-      <li ><a href="#">Home</a></li> 
+      
+    <?php wp_nav_menu(
+									array( 
+										'theme_location' => 'main_menu',
+										'menu'           => 'Main',
+										'depth'          => '2',
+										'container'      => 'false', 
+										'container_id'   => '',
+										'container_class'=> '',
+										'menu_id'        => '',
+										'menu_class'     => 'nav navbar-nav',
+										
+										'fallback_cb'	 => 'DD_Walker::fallback',
+										'walker'         => new DD_Walker(),
+										));
+								?>  
+  
+      <!-- <ul class="nav navbar-nav" id="">  <li ><a href="#">Home</a></li> 
       <li><a href="#">About</a></li> 
     <li><a href="#">Necklaces</a></li>
         <li><a href="#">Earrings</a></li>
@@ -88,8 +104,8 @@
           <li><a href="#">Jewelry Care</a></li> 
         </ul> 
       </li> 
-        <li><a href="#">Contact</a></li>
-    </ul>
+        <li><a href="#">Contact</a></li>  </ul> -->
+   
   </div>
 </nav>  
 

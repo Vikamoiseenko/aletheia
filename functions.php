@@ -9,11 +9,38 @@ Description: Theme for Aletheia Creation
 Version: 1.0
 */
 
+#custom walker include
+require_once('DD_Walker.php');
+#custom breadcrumbs include
+require_once('BS_Breadcrumbs.php');
 //Register my menu
-register_nav_menus(array(
-'main-menu' => __( 'Main' ),
-'Footer-menu' => __('Footer-menu')
+
+#Register custom menus
+if ( function_exists( 'register_nav_menus' ) ) {
+	register_nav_menus(
+		array(
+		  'main-menu' => 'Main',
+		  'Footer-menu' => 'Footer-menu',
+		  'social_menu' => 'Social Menu' 
+		)
+	);
+}   
+
+//Enable Feauture images and post thumbnails
+add_theme_support('post-thumbnails');
+//
+//register sidebar
+register_sidebar(array(
+	'before_widget' => '<div>',
+	'after_widget' => '</div>',
+	'before_title' => '<h2>',
+	'after_title' => '</h2>',
 ));
+
+
+//Register sidebars
+add_action( 'widgets_init', 'my_register_sidebars' );
+
 
 //flexslider
 function add_flexslider() {    
@@ -22,19 +49,105 @@ function add_flexslider() {
         echo '<div class="flexslider">';
         echo '<ul class="slides">';
     
-        foreach ($attachments as $attachment_id => $attachment) {            
-	     echo '<li>';
-            echo wp_get_attachment_image($attachment_id, 'large');
-            echo '<span class="flex-caption">';
-            echo get_post_field('post_excerpt', $attachment->ID);
-            echo '</span>';
-            echo '</li>';
-        }
-        echo '</ul>';
-        echo '</div>';
-    }
+ // create the list items for images with captions
+    
+    foreach ( $attachments as $attachment_id => $attachment ) { 
+	
+		$theImage = wp_get_attachment_image($attachment_id, 'flexslider');
+		$theBlockquote = get_post_field('post_excerpt', $attachment->ID);
+		$theLink = get_post_field('post_content', $attachment->ID);
+	
+        echo '<li>';
+		
+		if (is_page('Home')) { // use full size image with blockquote for home page
+			
+        	echo $theImage;
+			echo '<a href="'.$theLink.'"><blockquote class="home">'.$theBlockquote. '&nbsp;</blockquote></a>';
+			
+		}
+		
+		else { // use large size image with caption for all other pages and postings
+			
+			echo wp_get_attachment_image($attachment_id, 'flexslider');
+			echo '<p>';
+			echo get_post_field('post_excerpt', $attachment->ID);
+			echo '</p>';
+			
+		}
+      
+        echo '</li>';
+        
+    } ?>
+    
+    </ul>
+    </div>
+    <!-- End Slider -->
+        
+	<?php }// end see if images
+	
+} // end add flexslide 
+add_shortcode( 'flexslider', 'add_flexslider' ); 
+
+// Get Child Pages 
+function get_child_pages() {
+	
+	global $post;
+	
+	rewind_posts(); // stop any previous loops 
+	query_posts(array('post_type' => 'page', 'posts_per_page' => -1, 'post_status' => publish,'post_parent' => $post->ID,'order' => 'ASC','orderby' => 'menu_order')); // query and order child pages 
+    
+	while (have_posts()) : the_post(); 
+	
+		$childPermalink = get_permalink( $post->ID ); // post permalink
+		$childID = $post->ID; // post id
+		$childTitle = $post->post_title; // post title
+		$childExcerpt = $post->post_excerpt; // post excerpt
+        
+		echo '<article id="page-excerpt-'.$childID.'" class="box-left">';
+		echo '<div class="section-box">';
+		echo '<p id="button"><a href="'.$childPermalink.'">'.$childTitle.'</a></p>';
+		echo '</div>';
+		echo '<div class="section-boxes">';
+		echo '<p id>'.$childExcerpt.' <a href="'.$childPermalink.'">'; ?> <i class="fa fa-arrow-circle-right"></i> <?php '</a></p>';
+		echo '</div>';
+		echo '</article>';
+        
+	endwhile;
+	
+	// reset query
+	wp_reset_query();
+        
 }
-add_shortcode( 'flexslider', 'add_flexslider' );
-
-
+//
+//create page excerpts
+add_post_type_support('page', 'excerpt');
+//
+//Get my title tag
+function get_my_title_tag() {
+	global $post; 
+	
+	if(is_front_page()) {//the front page
+		bloginfo('description');
+	}
+	elseif (is_page() || is_single()) {//page and postings
+		the_title(); //title of page posting
+	}
+	
+	else {
+		bloginfo('description'); 
+	}
+	if ($post->post_parent) { //if there is a parent
+		echo ' | ';
+		echo get_the_title($post->post_parent); 
+		}
+	echo ' | '; //separator with space
+	bloginfo('name'); //site name
+	echo ' | ';
+	echo 'Seattle, WA';
+	}
+function get_seo() {
+	$myPosting = get_post(186);
+	$mySEO = $myPosting->post_content;
+	echo $mySEO;
+}
 ?>

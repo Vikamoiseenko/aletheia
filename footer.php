@@ -1,7 +1,7 @@
 <footer class="row-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-3 col-sm-offset-1">
+    <div class="footer-container">
+       
+            <div class="col-xs-12 col-sm-3">
               <div id="logo-footer" class="col-xs-12 col-sm-4">
                 <a class="navbar-brand" href="<?php echo get_settings('home'); ?>" title="Link to Aletheia Creation"><img id="mainLogo" src="<?php bloginfo('template_directory'); ?>/images/aletheia_creation.jpg" width="237" height="130" />
 </a>      
@@ -23,7 +23,7 @@
                 <a href="#" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
                 <a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
             </div>
-        </div>
+       
     </div>
 </footer>
 
@@ -36,6 +36,7 @@
     <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
       <!-- Begin Flex Slider -->
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery.flexslider.js"></script>
+
 <script type="text/javascript" charset="utf-8">
   $(window).load(function() { // enable function upon window load
     $('.flexslider').flexslider({
