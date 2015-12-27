@@ -39,7 +39,7 @@ register_sidebar(array(
 
 
 //Register sidebars
-add_action( 'widgets_init', 'my_register_sidebars' );
+//add_action( 'widgets_init', 'my_register_sidebars' );
 
 
 //flexslider
@@ -145,6 +145,7 @@ function get_my_title_tag() {
 	echo ' | ';
 	echo 'Seattle, WA';
 	}
+
 function get_seo() {
 	$myPosting = get_post(186);
 	$mySEO = $myPosting->post_content;

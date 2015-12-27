@@ -94,7 +94,7 @@ height: auto;
     box-sizing: border-box;
     color: #fff;
     font-family: "Helvetica",sans-serif;
-    font-size: 30px;
+    font-size: 1.875em;
     /*height: 145px;*/
     height: 25%;
     line-height: 1.5em;
@@ -107,11 +107,13 @@ height: auto;
     border-left: 0px;
     text-align: center;
 }
-html body.home.page.page-id-42.page-template-default.logged-in.admin-bar.customize-support div#middle.container div.flexslider ul.slides li.flex-active-slide a blockquote.home p.flexsl{
-    font-size: 18px;
+
+div#middle.container div.flexslider ul.slides li.flex-active-slide a blockquote.home p.flexsl{
+	font-size: 0.8em;
+	line-height: 1.2em;
     text-align: center;
 }
-html body.home.page.page-id-42.page-template-default.logged-in.admin-bar.customize-support div#middle.container div.flexslider ul.slides li.flex-active-slide a blockquote.home p.flexsl:hover{
+div#middle.container div.flexslider ul.slides li.flex-active-slide a blockquote.home p.flexsl:hover{
     color: aqua;
 }
 	div.flexslider button.home {
@@ -190,9 +192,16 @@ html body.home.page.page-id-42.page-template-default.logged-in.admin-bar.customi
     text-shadow: none;
     top: 0;
     width: 100%;
+		text-decoration: none;
     box-sizing:border-box;
 }
-
+	div#middle.container div.flexslider ul.slides li.flex-active-slide a blockquote.home p.flexsl{
+		text-decoration: none;
+	}
+	p.flexsl{
+		font-size: 1em;
+		text-decoration: none;
+	}
 div.flexslider button.home {
     border-radius: 0;
     color: #fff;

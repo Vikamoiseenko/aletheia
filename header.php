@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Alethei Creation">
-<meta name="keywords" content="Aletheia Creation, Seattle, WA, Jewelry, Necklaces, Bracelets, Earings">
+<meta name="keywords" content="Aletheia Creation, Seattle, WA, Jewelry, Necklaces, Bracelets, Earrings">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Aletheia Creation</title>
+    <title><?php bloginfo('description'); ?> | <?php bloginfo('name'); ?></title>
 
     <!-- Bootstrap -->
     <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" rel="stylesheet">
@@ -44,19 +44,19 @@
 <div id="header-container">
 <div id="header">
 <!-- Begin logo -->
-<div id="logo">
+<div id="logo" class="col-xs-12 col-sm-9">
 <a class="navbar-brand" href="<?php echo get_settings('home'); ?>" title="Link to Aletheia Creation"><img id="mainLogo" src="<?php bloginfo('template_directory'); ?>/images/aletheia_creation.jpg" width="230" height="130" />
 </a>
 </div> <!-- end logo -->
 <!-- begin utility menu -->
 <div id="utility-header">
 <!-- Begin social icons -->
-<div id="social-header">
+<div id="social-header" class="col-xs-6 col-sm-3">
 <a href="#"><i class="fa fa-envelope-o fa-3x"></i></a>
 <a href="#" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
 <a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
 </div> <!-- end social icon -->
-<div id="text-header">
+<div id="text-header" class="col-xs-8 col-sm-4">
 <p>Mother Earth's Jewelry | Seattle, WA</p>
 </div>
 </div>    

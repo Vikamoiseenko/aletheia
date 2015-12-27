@@ -5,30 +5,34 @@
 <div class="row row-content">
     <div class="col-xs-12 col-sm-4">
     <section class="widgets-item">
-        <h3 class="widgets">New!</h3>
+        <h2 class="widgets">New!</h2>
+        <div class="col-xs-12 col-sm-12 text-center">
         <?php
-$page_id = 76;
-
-?>
-<?php echo get_the_post_thumbnail($page_id, 'medium'); ?>
-<?php echo '<a href="'.$page_link.'" class="button">Join Now&nbsp;&raquo;</a>'
-?>
+    $page_id = 166;
+    $page_link = get_permalink($page_id); ?>
+    <a class="widgets-image" href="<?php echo get_permalink( $page_id ); ?>">
+        <?php echo get_the_post_thumbnail($page_id, 'medium'); ?>
+</a>
+        </div>
         </section>
     </div>
     <div class="col-xs-12 col-sm-4">
         <section class="widgets-item">
-        <h3 class="widgets">Mother Earth’s Jewelry</h3>
+        <h2 class="widgets">Mother Earth’s Jewelry</h2>
 <p class="widgets">A couple of more words about the brand :) A couple of more words about the brand :) A couple of more words about the brand :) A couple of more words about the brand :)  </p>
         </section>    
     </div>
     <div class="col-xs-12 col-sm-4">
     <section class="widgets-item">
-        <h3 class="widgets">Bestseller</h3>
+        <h2 class="widgets">Bestseller</h2>
+        <div class="col-xs-12 col-sm-12 text-center">
         <?php
-    $page_id = 76; ?>
-     <?php   echo '<a class="widgets-image" href="' . get_permalink( $page_id ) . '">'; ?>
+    $page_id = 162;
+    $page_link = get_permalink($page_id); ?>
+    <a class="widgets-image" href="<?php echo get_permalink( $page_id ); ?>">
         <?php echo get_the_post_thumbnail($page_id, 'medium'); ?>
-'</a>';
+</a>
+        </div>
     </section>
     </div>
 </div><!-- closed div tag -->

@@ -67,7 +67,7 @@ body{
     margin: 0 auto;
 }
 #header-container{
-    height: 130px;
+    height: 150px;
     
 }
 .navbar-brand{
@@ -79,7 +79,8 @@ body{
     margin-top: 15px;
 }
 .fa-3x{
-    padding-left: 10px;
+   /* padding-left: 10px;*/
+	padding-left: 15px;
     padding-right: 0;
     color: #58595b;
 }
@@ -145,16 +146,19 @@ div#middle{
     padding: 0;
     
 }
+div.content{
+    padding-top: 10px;
+
+}
 .row-content{
     margin: 0 auto;
     background-color: #eeeadb;
-    border: 1px solid blue;
     clear: both;
     padding: 10px;
 }
 .row-footer{
     clear: both;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 .list-menu{
     list-style: none;
@@ -162,6 +166,12 @@ div#middle{
     color: #414042;
     font-size: 12pt;
     line-height: 24pt;
+}
+footer.row-footer div.footer-container div.col-xs-12.col-sm-5 ul#menu-footer-menu.list-menu a{
+	color: #414042;
+}
+.list-menu > a {
+	color: #414042;
 }
 div#middle.container nav.woocommerce-breadcrumb a{
     color: #e76b7e;
@@ -192,35 +202,71 @@ div.wrap{
     max-width: 980px;
 }
 div#social-footer{
-    text-align: center;
+    padding-right: 0;
+	text-align: right;
 }
 .widgets-item{
     height: 300px;
     border-radius: 10px;
     background-color: white;
+	margin-right: 2%;
     width: 300px;
+	width: 100%;
 }
 html body.home.page.page-id-42.page-template-default.logged-in.admin-bar.customize-support div#middle.container div.row.row-content div.col-xs-12.col-sm-4 section.widgets-item a.widgets-image img.attachment-medium.size-medium.wp-post-image{
     text-align: center;
 }
 
-section.widgets-item p.widgets{
-    font-size: 16pt;
-    line-height: 21pt;
-    color: #000;
-    margin: 5px;
-    text-align: center;
+html body.home.page.page-id-42.page-template-default.logged-in.admin-bar.customize-support div#middle.container div.row.row-content div.col-xs-12.col-sm-4 section.widgets-item a.widgets-image img.attachment-medium.size-medium.wp-post-image{
+    width: 206px;
+    height: 206px;
 }
-section.widgets-item h3.widgets{
-    font-size: 28pt;
-    line-height: 34pt;
+section.widgets-item p.widgets{
+    font-size: 1.2em;
+    line-height: 1.7em;
+    color: #000;
+    margin: 0.05em;
+    text-align: center;
+    color: #414042;
+}
+section.widgets-item h2.widgets{
+    line-height: 1.5em;
     color: #e76b7e;
     text-align: center;
+    padding-top: 0.5em;
+	padding-bottom: 0.5em;
 }
 #logo-footer{
     padding-bottom: 95px;
 }
+div#site-info{
+	max-width: 980px;
+	margin: 0px auto;
+	clear: both;
+	padding-top: 20px;
+}
+h2.boxes{
+	   color: #e76b7e;
+	text-align: center;
+	line-height: 1.5em;
 
+}
+.woocommerce ul.products li.product h3{
+	color: #e76b7e !important;
+	text-align: center;
+}
+.woocommerce ul.products li.product .price{
+	text-align: center;
+	color: #414042 !important;
+}
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button{
+	background-color: #e76b7e !important;
+	color: #ffffff !important;
+	border-radius: 10px !important;
+}
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
+	text-align: center !important;
+}
 /* =WordPress Core
 -------------------------------------------------------------- */
 .alignnone {
@@ -297,4 +343,56 @@ a img.aligncenter {
     line-height: 17px;
     margin: 0;
     padding: 0 4px 5px;
+}
+
+@media screen and (max-width: 850px) {
+	.widgets-item {margin-bottom: 15px;}
+	h2.widgets{
+		font-size: 1.6em;
+	}
+	section.widgets-item p.widgets{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+@media screen and (max-width: 750px) {
+	div#middle{
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	#logo{
+		
+	}
+	#header-container{
+		height: 180px;
+	}
+	.fa-3x{
+		font-size: 2em;
+		padding-left: 5px;
+	}
+	div#social-header{
+		position: absolute;
+	}
+	div#text-header {
+		position: absolute;
+		margin-left: 130px;
+		margin-top: 10px;
+		text-align: right;
+	}
+ div#text-header p{
+		font-size: 9pt;
+	}
+	#mainLogo{
+		left: 0;
+    margin: 2.75em auto;
+    position: absolute;
+    right: 0;
+	}
+	div#site-info{
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+section#boxes-1 p img{
+		display: none;
+	}
 }
