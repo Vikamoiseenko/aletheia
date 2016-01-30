@@ -62,7 +62,8 @@ function add_flexslider() {
 		if (is_page('Home')) { // use full size image with blockquote for home page
 			
         	echo $theImage;
-			echo '<a href="'.$theLink.'"><blockquote class="home">'.$theBlockquote. '&nbsp;</blockquote></a>';
+			echo '<blockquote class="home">'.$theBlockquote. '&nbsp;</blockquote>';
+			echo '<a href="'.$theLink.'"><button class="home">Click to learn more and find yourself a gift from the Morther Earth!</button></a>';
 			
 		}
 		
@@ -151,4 +152,17 @@ function get_seo() {
 	$mySEO = $myPosting->post_content;
 	echo $mySEO;
 }
+
+
+/*
+ * wc_remove_related_products
+ * 
+ * Clear the query arguments for related products so none show.
+ * Add this code to your theme functions.php file.  
+ */
+function wc_remove_related_products( $args ) {
+	return array();
+}
+add_filter('woocommerce_related_products_args','wc_remove_related_products', 10); 
+
 ?>

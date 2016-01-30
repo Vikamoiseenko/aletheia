@@ -1,9 +1,10 @@
 <?php get_header(); ?>
 <!-- Begin flexslider -->
 <?php add_flexslider(); ?>
-
+</div>
+<div class="row-wrapper">
 <div class="row row-content">
-    <div class="col-xs-12 col-sm-4">
+    <div id="widgets-item" class="col-xs-12 col-sm-4">
     <section class="widgets-item">
         <h2 class="widgets">New!</h2>
         <div class="col-xs-12 col-sm-12 text-center">
@@ -16,13 +17,15 @@
         </div>
         </section>
     </div>
-    <div class="col-xs-12 col-sm-4">
+    <div id="widgets-item" class="col-xs-12 col-sm-4">
         <section class="widgets-item">
         <h2 class="widgets">Mother Earth’s Jewelry</h2>
+        <div class="col-xs-12 col-sm-12 text-center">			
 <p class="widgets">A couple of more words about the brand :) A couple of more words about the brand :) A couple of more words about the brand :) A couple of more words about the brand :)  </p>
+			</div>
         </section>    
     </div>
-    <div class="col-xs-12 col-sm-4">
+    <div id="widgets-item" class="col-xs-12 col-sm-4">
     <section class="widgets-item">
         <h2 class="widgets">Bestseller</h2>
         <div class="col-xs-12 col-sm-12 text-center">

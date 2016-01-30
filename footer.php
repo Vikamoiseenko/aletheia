@@ -1,14 +1,15 @@
+</div>
 <footer class="row-footer">
 	
       <div class="footer-container">
        
-            <div class="col-xs-12 col-sm-4">
+            <div id="footer-logo" class="col-xs-12 col-sm-4">
               <div id="logo-footer" class="col-xs-12 col-sm-4">
                 <a class="navbar-brand" href="<?php echo get_settings('home'); ?>" title="Link to Aletheia Creation"><img id="mainLogoFooter" src="<?php bloginfo('template_directory'); ?>/images/aletheia_creation.jpg" width="237" height="130" />
 </a>      
                 </div> 
             </div>
-            <div class="col-xs-12 col-sm-5">
+            <div id="footer-logo" class="col-xs-12 col-sm-4">
 				
 				<?php wp_nav_menu(
 									array( 
@@ -31,7 +32,7 @@
                 <li>Contact</li> -->
                 
             </div>
-            <div id="social-footer" class="col-xs-6 col-sm-3">
+            <div id="social-footer" class="col-xs-6 col-sm-4">
                 <a href="#"><i class="fa fa-envelope-o fa-3x"></i></a>
                 <a href="#" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
                 <a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>

@@ -44,20 +44,20 @@
 <div id="header-container">
 <div id="header">
 <!-- Begin logo -->
-<div id="logo" class="col-xs-12 col-sm-9">
-<a class="navbar-brand" href="<?php echo get_settings('home'); ?>" title="Link to Aletheia Creation"><img id="mainLogo" src="<?php bloginfo('template_directory'); ?>/images/aletheia_creation.jpg" width="230" height="130" />
+<div id="logo" class="col-xs-12 col-sm-8">
+<a class="navbar-brand" href="<?php echo get_settings('home'); ?>" title="Link to Aletheia Creation"><img id="mainLogo" src="<?php bloginfo('template_directory'); ?>/images/aletheia_creation0123.png" width="230" height="130" />
 </a>
 </div> <!-- end logo -->
 <!-- begin utility menu -->
 <div id="utility-header">
 <!-- Begin social icons -->
-<div id="social-header" class="col-xs-6 col-sm-3">
+<div id="social-header" class="col-xs-6 col-sm-4">
 <a href="#"><i class="fa fa-envelope-o fa-3x"></i></a>
 <a href="#" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
 <a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
 </div> <!-- end social icon -->
-<div id="text-header" class="col-xs-8 col-sm-4">
-<p>Mother Earth's Jewelry | Seattle, WA</p>
+<div id="text-header" class="col-xs-6 col-xs-offset-6 col-sm-4">
+<p>Seattle, WA</p>
 </div>
 </div>    
 </div> <!-- end header -->
