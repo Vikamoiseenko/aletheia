@@ -4,7 +4,7 @@
       <div class="footer-container">
        
             <div id="footer-logo" class="col-xs-12 col-sm-4">
-              <div id="logo-footer" class="col-xs-12 col-sm-4">
+              <div id="logo-footer">
                 <a class="navbar-brand" href="<?php echo get_settings('home'); ?>" title="Link to Aletheia Creation"><img id="mainLogoFooter" src="<?php bloginfo('template_directory'); ?>/images/aletheia_creation.jpg" width="237" height="130" />
 </a>      
                 </div> 
@@ -42,7 +42,7 @@
 </footer>
 <!-- Begin site inform -->
 <div id="site-info">
-<p>&copy;<?php echo date("Y"); ?> <a href="<?php get_site_url(); ?>"><?php bloginfo('name'); ?></a>. Built for the Aletheia Creation Anna Atiagina, Victoria Moiseenko <span class="alignright">&nbsp;&nbsp;&nbsp;<?php wp_loginout(); ?></span></p>
+<p>&copy;<?php echo date("Y"); ?> <a href="<?php get_site_url(); ?>"><?php bloginfo('name'); ?></a>. Built for the Aletheia Creation <a href="http://atiagina.com/">Anna Atiagina</a>, <a href="http://mykhabarovsk.com/">Victoria Moiseenko</a> <span class="alignright">&nbsp;&nbsp;&nbsp;<?php wp_loginout(); ?></span></p>
 </div>
 <!-- Start WP footer -->
 <?php wp_footer(); ?>

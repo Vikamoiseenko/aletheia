@@ -73,6 +73,10 @@ body{
 #logo{
 	padding-left: 0px;
 }
+#mainLogoFooter{
+		width: 237px;
+	height: 130px;
+	}
 .navbar-brand{
     padding: 0;
 }
@@ -526,14 +530,20 @@ a img.aligncenter {
     position: absolute;
     right: 0;
 	}
+	
 	div#site-info{
 		padding-right: 10px;
 		padding-left: 10px;
 	}
-section#boxes-1 p img{
-		display: none;
-	}
 	section#boxes-1 img{
-		display: none;
+		width: 100%;
+		margin: 0px auto;
+	}
+	img.alignnone{
+		width: 100%;
+		margin: 0px auto;
+	}
+	div.flexslider button.home{
+		padding: 0px 10px 15px;
 	}
 }
